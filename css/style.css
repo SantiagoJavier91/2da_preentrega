@@ -1,0 +1,393 @@
+/* TIPOGRAFÍAS USADAS */
+@font-family {
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+	src: url(../fonts/RobotoCondensed-LightItalic.ttf);
+	src: url(../fonts/RobotoCondensed-BoldItalic.ttf);
+	src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+body{margin: 0px;}
+header, main, footer, .copy{
+	font-family: 'Roboto Condensed';
+	overflow-x: hidden;
+}
+.mainNosotros, .mainInicio, .mainServicios, .mainContacto, .mainObras {
+	background-color: gainsboro; 
+}
+/*DESKTOP*/
+@media (min-width: 1024px){
+
+	/* HEADER */
+.menu{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.menu li{
+	padding: 10px 20px;
+}
+.menu li a{
+	text-decoration: none; 
+	color: aliceblue; 
+	font-weight: 400; 
+	transition: 1s all;
+	border-radius: 5px;
+	padding: 20px 35px;
+	display: inline-block;
+}
+.menu li a:hover{
+	background-color: rgb(107, 11, 107);
+	transform: scale(1.2);
+}
+header{ 
+	background-image: url(../img/fondo\ header.jpg); 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+/*/*CONTENIDO PRINCIPAL*/*
+.mainNosotros{
+	display: grid;
+	grid-template-columns: 33% 34% 33%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: 
+	"tituloNosotros tituloNosotros tituloNosotros"
+	"textoNosotros textoNosotros textoNosotros" 
+	"fotoNosotros fotoNosotros fotoNosotros"
+	"textoN1 textoN2 textoN3";
+}
+.tituloNosotros {grid-area: tituloNosotros;}
+.textoNosotros {grid-area: textoNosotros;}
+.fotoNosotros {grid-area: fotoNosotros;}
+.textoN1 {grid-area: textoN1;}
+.textoN2 {grid-area: textoN2;}
+.textoN3 {grid-area: textoN3;}
+
+.tituloNosotros, .tituloInicio, .tituloServicios, .tituloContacto, .tituloObras{
+	color:black; 
+	font-style:normal;
+	font-size: 25px;
+	font-weight: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 15px;
+}
+.texto, .textoContacto, .textoNosotros, .textoServicios, .textoObras {
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	font-size: 21px; 
+	padding-left: 15px;
+}
+.textoN1, .textoN2, .textoN3, .obra1, .obra2 {
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	font-size: 21px; 
+	padding: 15px;
+	margin: 15px;
+	background-color: rgb(175, 175, 175) ;
+	border-radius: 15px;
+	transition: 1.5s all ease;
+}
+.textoN1:hover, .textoN2:hover, .textoN3:hover {
+	background-color: rgb(255, 255, 255);
+	transform:translateY(-2%);
+}
+.mainServicios{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"tituloServicios tituloServicios tituloServicios tituloServicios"
+	"textoServicios textoServicios textoServicios textoServicios"
+	"cardServ1 cardServ2 cardServ3 cardServ4";
+}
+.tituloServicios {grid-area: tituloServicios;}
+.textoServicios {grid-area: textoServicios;}
+.cardServ1 {grid-area: cardServ1;}
+.cardServ2 {grid-area: cardServ2;}
+.cardServ3 {grid-area: cardServ3;}
+.cardServ4 {grid-area: cardServ4;}
+
+.card{
+	border-radius: 15px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+	overflow: hidden;
+	background-color: rgb(175, 175, 175) ;
+	cursor: default;
+	transition: 1.5s all ease;
+}
+.card:hover {
+	transform:translateY(-2%);
+	background-color: rgb(255, 255, 255);
+}
+.listaS ul{
+	font-size: 20px;
+	font-weight: 400;
+	margin-left: 5px;
+	flex-wrap: wrap;
+}
+h2{
+	font-size: 40px;
+	font-weight: 100;
+	margin-left: 0px;
+}
+.listaServicios1, .listaServicios3, .listaServicios2, .listaServicios4 {
+	font-size: 21px; 
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	padding: 10px;	
+}
+.listaServicios {
+	list-style-type: none;
+	font-size: 21px; 
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	padding: 10px;	
+}
+.listaServicios li a{
+	text-decoration: none; 
+	padding: 20px 35px;
+}
+.fotoServicios1 img, .fotoServicios2 img, .fotoServicios3 img, .fotoServicios4 img, .fotoObra1 img, .fotoObra2 img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 15px;
+}
+.mainObras {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"tituloObras tituloObras"
+	"textoObras textoObras" 
+	"obra1 obra2";
+}
+.tituloObras {grid-area: tituloObras;}
+.textoObras {grid-area: textoObras;}
+.obra1 {grid-area: obra1;}
+.obra2 {grid-area: obra2;}
+
+.obra1, .obra2{
+	font-size: 21px; 
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	padding: 10px;	
+	transition: 1.5s all ease;
+}
+.obra1:hover, .obra2:hover{
+	transform:translateY(-2%);
+	background-color: rgb(255, 255, 255);
+}
+
+.fotoNosotros img, .fotoInicio img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	overflow: hidden;
+}
+.form{
+	width: 700px;
+	color: black; 
+	font-weight: 300; 
+	font-size: 21px; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 50px 100px;
+}
+form input, form textarea{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	left: 20px;
+	width: 700px;
+	font-size: 21px;
+	font-weight: 300;
+}
+/* FOOTER */
+footer{
+	background-image: url(../img/fondo\ footer.jpg);
+	display: flex;
+	list-style-type: none;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: baseline;
+	color: aliceblue;
+	padding: 20px;
+}
+.rrss{
+	display: inline-block;
+	left: 0px; 
+	padding: 5px;
+	transition: .5s all;
+}
+.rrss:hover{
+	transform: scale(1.2);
+}
+h5{
+	font-weight: 100; 
+	font-size: 15px; 
+	font-style: italic;
+}
+.copy{
+	display: flex;
+	background-color: black;
+	color: aliceblue;
+	justify-content: center
+}
+}
+/*MOBILE*/
+@media (max-width: 768px){
+	/* HEADER MOBILE */
+	.menu{
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
+	}
+	.menu li{
+		padding: 10px 10px;
+	}
+	.menu li a{
+		text-decoration: none; 
+		color: aliceblue; 
+		font-weight: 400; 
+	}
+	header{ 
+		background-image: url(../img/fondo\ header.jpg); 
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+}
+.logoHeader{
+	justify-content: center;
+}
+/* FOOTER MOBILE*/
+footer{
+	background-image: url(../img/fondo\ footer.jpg);
+	display: flex;
+	list-style-type: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	color: aliceblue;
+	padding-left: 20px;
+}
+.rrss{
+	display: inline-block;
+	padding: 5px;
+}
+.copy{
+	display: flex;
+	background-color: black;
+	color: aliceblue;
+	justify-content: center
+}
+/*CONTENIDO PRINCIPAL MOBILE*/
+.fotoNosotros img, .fotoInicio img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	overflow: hidden;
+}
+.card{
+	border-radius: 15px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+	overflow: hidden;
+	background-color: rgb(175, 175, 175) ;
+}
+.fotoServicios1 img, .fotoServicios2 img, .fotoServicios3 img, .fotoServicios4 img, .fotoObra1 img, .fotoObra2 img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 15px;
+}
+.tituloNosotros, .tituloInicio, .tituloServicios, .tituloContacto, .tituloObras{
+	color:black; 
+	padding-left: 20px;
+}
+.texto, .textoContacto, .textoNosotros, .textoServicios, .textoObras {
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	font-size: 18px; 
+	padding-left: 20px;
+}
+.obra1, .obra2{
+	font-size: 18px; 
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	padding: 10px;	
+}
+.textoN1, .textoN2, .textoN3, .obra1, .obra2 {
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	font-size: 18px; 
+	padding: 15px;
+	margin: 15px;
+	background-color: rgb(175, 175, 175) ;
+	border-radius: 15px;
+}
+.form{
+	width: auto;
+	color: black; 
+	font-weight: 300; 
+	font-size: 18px; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 20px;
+}
+form input, form textarea{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-size: 18px;
+	font-weight: 300;
+}
+.listaServicios {
+	list-style-type: none;
+	font-size: 18px; 
+	width: auto;
+	color: black; 
+	font-weight: 400; 
+	padding: 10px;	
+}
+.listaServicios li a{
+	text-decoration: none; 
+	padding: 10px 20px;
+}
+}
